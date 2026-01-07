@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ChatRoom from "./components/ChatRoom";
 
 export default function App() {
   const [username, setUsername] = useState("");
@@ -28,7 +29,7 @@ export default function App() {
           <button onClick={joinRoom}>Join Room</button>
         </div>
       ) : (
-        <div>Joined</div>
+        <ChatRoom username={username} room={room}></ChatRoom>
       )}
     </div>
   );
